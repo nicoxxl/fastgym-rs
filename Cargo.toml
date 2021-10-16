@@ -3,5 +3,8 @@ name = "fastgym"
 version = "0.0.1"
 edition = "2021"
 license = "MIT"
+description = "A set of fast gym environements"
+readme = "README.md"
+repository = "https://github.com/nicoxxl/fastgym-rs/"
 
 [dependencies]
