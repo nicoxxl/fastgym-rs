@@ -8,3 +8,12 @@ readme = "README.md"
 repository = "https://github.com/nicoxxl/fastgym-rs/"
 
 [dependencies]
+rand = "0.8"
+criterion = "0.3"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "find_point"
+harness = false
