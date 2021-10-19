@@ -138,7 +138,7 @@ where
 
 impl<OK, R, const X: usize, const Y: usize> Env<[[OK; Y]; X]> for FindPoint<R, 2>
 where
-    OK: From<ObsKind>,
+    OK: From<ObsKind> + Copy,
     R: Rng,
 {
     type Action = [Action; 2];
@@ -163,6 +163,8 @@ where
     fn observe(&self, obs: &mut [[OK; Y]; X]) {
         assert_eq!(self.size[0], X);
         assert_eq!(self.size[1], Y);
+        *obs = [[ObsKind::Nothing.into(); Y]; X];
+
         for x in 0..X {
             for y in 0..Y {
                 if self.pos == [x, y] {
