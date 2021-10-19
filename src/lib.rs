@@ -1,4 +1,5 @@
 pub mod find_point;
+pub mod snake;
 
 /// Main trait implement by each environements
 pub trait Env<Obs> {
